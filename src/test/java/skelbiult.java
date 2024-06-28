@@ -9,11 +9,12 @@ public class skelbiult {
     public static WebDriver wait;
 
     @BeforeClass
-    public void setup(){
+    public void setup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         acceptCookies();
     }
+
     @Test
     public void all() throws InterruptedException {
         search("verpimo ratelis");
@@ -27,14 +28,17 @@ public class skelbiult {
         driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div[4]/div[1]/div[2]/div[3]/div[1]/a[1]")).click();
         driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div[4]/div[1]/div[2]/div[4]/div[1]/a[3]")).click();
         System.out.println("rasta: " + pages);
-                ////html/body/div[3]/div[2]/div[2]/div[4]/div[1]/div[2]/div[4]/div[1]/a[3]
+        ////html/body/div[3]/div[2]/div[2]/div[4]/div[1]/div[2]/div[4]/div[1]/a[3]
+
+
     }
 
-    public void acceptCookies(){
+    public void acceptCookies() {
         driver.get("https://www.skelbiu.lt/");
         driver.findElement(By.id("onetrust-accept-btn-handler")).click();
     }
-    public void search(String searchWord){
+
+    public void search(String searchWord) {
         driver.findElement(By.id("searchKeyword")).sendKeys(searchWord);
         driver.findElement(By.id("searchButton")).click();
 //        driver.findElement(By.id("searchKeyword")).clear();
