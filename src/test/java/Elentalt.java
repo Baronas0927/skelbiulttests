@@ -24,8 +24,10 @@ public class Elentalt {
         driver.findElement(By.id("submit-button")).click();
         WebElement uploadElement = driver.findElement(By.id("inputfile"));
         uploadElement.sendKeys("C:\\Users\\Dovydas\\Desktop\\licensed-image.jpg");
-        Thread.sleep(500);
+        Thread.sleep(600);
         driver.findElement(By.id("forward-button")).click();
+        driver.findElement(By.id("forward-button")).click();
+
     }
 
     @BeforeClass
